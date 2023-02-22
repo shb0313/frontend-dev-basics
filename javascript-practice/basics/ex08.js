@@ -50,10 +50,3 @@ console.log(i2);
 
 i1.another = {};             // 유사객체로 변환, new Number(i1).another = {};
 console.log(i1.another);     // 유사객체로 변환, console.log(new Number(i1).another);
-
-
-
-
-
-
-
