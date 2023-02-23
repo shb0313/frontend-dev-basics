@@ -65,3 +65,4 @@ for(prop in o6) {
     console.log(prop, o6[prop]);
 }
 
+
