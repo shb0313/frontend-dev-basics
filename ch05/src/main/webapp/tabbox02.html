@@ -6,19 +6,22 @@
 <link rel="stylesheet" type="text/css" href="/ch05/css/tabbox.css" />
 </head>
 <script>
-window.addEventListener('load', function() {
-	var divTabBox = document.getElementsByClassName("tab-box")[0];
-	var ul = divTabBox.childNodes[1];
-	var lis = ul.getElementsByTagName('li');
-	
-	Array.prototype.forEach.call(lis, function(li) {
-		li.addEventListener('click', function() {
-			console.log('click');
+	var onTabClicked = function() {
+		var liselected = document.querySelector('li.selected');
+		liselected && (liselected.className = '');
+		
+		this.className = "selected";
+	}
+
+	window.addEventListener('load', function() {
+		var divTabBox = document.getElementsByClassName("tab-box")[0];
+		var ul = divTabBox.childNodes[1];
+		var lis = ul.getElementsByTagName('li');
+
+		Array.prototype.forEach.call(lis, function(li) {
+			li.addEventListener('click', onTabClicked);
 		});
 	});
-});
-
-
 </script>
 <body>
 	<div class="tab-box">
