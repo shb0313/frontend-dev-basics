@@ -3,6 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.onload = function() {
+	setTimeout(function() {
+		var imgElement = document.createElement('img');
+		imgElement.src = "https://thumbs.gfycat.com/PastEvilGyrfalcon-size_restricted.gif";
+		imgElement.style.width = "200px";
+		imgElement.style.alt = "에~";
+		imgElement.style.title = "에~";
+		imgElement['data-no'] = 10;
+		
+		document.body.appendChild(imgElement);
+	}, 2000);
+}
+</script>
 </head>
 <body>
 	<h1 id='h' data-no='10'>DOM(Document Object Model)</h1>

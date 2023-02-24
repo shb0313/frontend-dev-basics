@@ -3,6 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.onload = function() {
+	setTimeout(function() {
+		var imgElement = document.createElement('img');
+		
+		// getAttribute / setAttribute
+		// 표준 속성에 대해서 읽기/쓰기도 가능하지만(이름으로 읽기/쓰기도 가능).
+		// 비표준 속성에 대해서 읽기/쓰기를 하기위해 사용
+		imgElement.setAttribute('src', 'https://mblogthumb-phinf.pstatic.net/MjAyMTA0MDVfODUg/MDAxNjE3NTUwMDE2MjAy.I3KrMfy07wyIbMV9uXv2ndxD94ymCtBU_9V9vOxPrVQg.LmKoouZyCOdoePCYRMRlke8cpn1fCAO1sn0Y0_e9xoog.GIF.se413496/%EC%A7%B1%EA%B5%AC%EC%9B%80%EC%A7%A412%EB%A7%B9%EA%B5%AC.gif?type=w800');
+		imgElement.setAttribute('style', 'width: 400px');
+		imgElement.setAttribute('alt', "에~");
+		imgElement.setAttribute('title', "에~");
+		imgElement.setAttribute('no', 10);  // 비표준 솟성은 사용할 떄 "data-" prefix를 달아 사용. data-no
+		
+		// 비표준 속성은 이름으로 접근할 수 없음
+		console.log(imgElement.no, imgElement.getAttribute('no'), imgElement.alt);
+		
+		
+		document.body.appendChild(imgElement);
+	}, 2000);
+}
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>
