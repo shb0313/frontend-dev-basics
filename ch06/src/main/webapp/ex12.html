@@ -42,7 +42,7 @@ window.addEventListener("load", function(){
 	
 	// 다중 이벤트 핸들러 등록
 	// el.addEventListener('click', clickEventHandler1);
-	el.registerEventHandler('click', clickEventHandler1);
+	registerEventHandler(el, 'click', clickEventHandler1);
 	el.addEventListener('click', clickEventHandler2);
 	
 	// DOM Event Lv.0도 함계 지원
