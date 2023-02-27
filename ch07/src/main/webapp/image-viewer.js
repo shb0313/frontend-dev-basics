@@ -1,5 +1,5 @@
 var slide = 0;
-var indexTmp = 0;
+var indexTemp = 0;
 
 imageViewer = {
 
@@ -34,8 +34,7 @@ imageViewer = {
 		var index = Math.floor(Math.random() * this._images.length);
 		console.log("이미지 바꾸기");
 		
-		if(index == indexTmp) {
-			console.log("같은거");
+		if(index == indexTemp) {
 			imageViewer._changeImage();
 			return;
 		}
