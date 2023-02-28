@@ -8,36 +8,35 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="${pageContext.request.contextPath }/jquery/jquery-3.6.0.js"></script>
-<script type="text/javascript">
-	$(function() {
-		$("button").click(function() {
-			$.ajax({
-				url: "/${pageContext.request.contextPath }/api/json",
-				async: true,
-				type: "get",
-				dateType: "json",
-				success: function(response) {
-					if(response.result === "fail") {
-						console.error(response.message);
-						return;
-					}
-										
-					var vo = response.data;
-					
-					var htmls = "";
-					htmls += ("<h3>" + vo.no  + "</h3>");
-					htmls += ("<h4>" + vo.name  + "</h4>");
-					htmls += ("<h5>" + vo.message  + "</h5>");
-					
-					$("#data").html(htmls); 
-					
-				},
-				error: function(xhr, status, error) {
-					console.log(status, error);
+<script>
+$(function(){
+	$("button").click(function(){
+		$.ajax({
+			url: "${pageContext.request.contextPath}/api/json",
+			async: true,
+			type: "get",
+			dataType: "json",
+			success: function(response) {
+				if(response.result === "fail") {
+					console.error(response.message);
+					return;
 				}
-			});
+				
+				var vo = response.data;
+				
+				var htmls = "";
+				htmls += ("<h3>" + vo.no + "</h3>");
+				htmls += ("<h4>" + vo.name + "</h4>");
+				htmls += ("<h5>" + vo.message + "</h5>");
+				
+				$("#data").html(htmls);
+			},
+			error: function(xhr, status, error) {
+				console.error(status, error);
+			}
 		});
 	});
+});
 </script>
 </head>
 <body>

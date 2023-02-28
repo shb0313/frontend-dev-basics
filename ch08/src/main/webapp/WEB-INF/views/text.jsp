@@ -9,12 +9,11 @@
 <title>Insert title here</title>
 <script src="${pageContext.request.contextPath }/jquery/jquery-3.6.0.js"></script>
 <script>
-$(function() {
-	$("button").click(function() {
-		$("#data").load("${pageContext.request.contextPath }/api/text");
-		
+$(function(){
+	$("button").click(function(){
+		$("#data").load("${pageContext.request.contextPath}/api/text");
 	});
-});
+})
 </script>
 </head>
 <body>
