@@ -12,7 +12,7 @@
 	$(function() {
 		$("button").click(function() {
 			$.ajax({
-				url: "/ch08/api/json",
+				url: "/${pageContext.request.contextPath }/api/json",
 				async: true,
 				type: "get",
 				dateType: "json",
@@ -45,8 +45,6 @@
 	
 	<button>데이터 가져오기</button>
 	<div id="data"></div>
-	
-	
 	
 </body>
 </html>

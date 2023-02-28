@@ -15,6 +15,7 @@ $(function() {
 /* jquery plug in */
 $.fn.hello = function() {
 	console.log('hello world', this.length);
+	console.log('this : ', this);	
 	return this;
 };
 

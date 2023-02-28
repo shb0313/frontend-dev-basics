@@ -44,7 +44,7 @@ imageViewer = {
 			src: "images/" + imageViewer._images[index].file,
 			title: imageViewer._images[index].name,
 		});
-		indexTemp = index;
+		return index;
 	},
 
 	_images: [{
