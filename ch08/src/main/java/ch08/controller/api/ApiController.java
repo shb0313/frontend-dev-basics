@@ -17,7 +17,7 @@ public class ApiController {
 	@ResponseBody
 	@RequestMapping(value="/text", method=RequestMethod.GET)
 	public String text() {
-		return "Text 데이타";
+		return "Text 데이터";
 	}
 
 	@ResponseBody
