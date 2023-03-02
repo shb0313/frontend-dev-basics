@@ -8,7 +8,6 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="${pageContext.request.contextPath }/jquery/jquery-3.6.0.js"></script>
-<script src="${pageContext.request.contextPath }/jquery/jquery-3.6.0.js"></script>
 <script>
 $(function(){
 	$("button").click(function(){
