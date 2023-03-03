@@ -19,7 +19,7 @@ public class GuestbookController {
 
 	@PostMapping("")
 	public JsonResult ex01(@RequestBody GuestbookVo vo) {
-		// guestbookService.assMessage(vo);
+		// guestbookService.addMessage(vo);
 		
 		vo.setNo(1L);
 		vo.setPassword("");
