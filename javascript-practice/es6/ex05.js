@@ -1,5 +1,5 @@
 /*
-    Arrow Function
+    Arrow(=>) Function
 */
 
 const power = function(x) {
@@ -72,3 +72,28 @@ console.log("[3]");
         process.stdout.write(`${e}: ${(x => x * x)(e)}\t`)
     }
 });
+
+// ex4 - this를 어휘적으로 바인딩(Lexical Bind)
+console.log("\n ----------------- \n");
+console.log("[4]");
+
+const dooly = {
+    name: '둘리',
+    friends: ['또치', '마이콜', '도우너', '길동'],
+    printFriends: function() {
+        //console.log(this);
+        this.friends.forEach(f => {
+            console.log(`${this.name}의 친구 ${f}`)
+        });
+    }
+};
+
+dooly.printFriends();
+
+
+
+
+
+
+
+
