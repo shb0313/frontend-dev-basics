@@ -121,7 +121,8 @@ console.log(x, y);
 [x, y] = [y, x]
 console.log(x, y);
 
-// ex10 - 배열의 구조 분해(... array spread operator) 
+// ex10 - 배열의 구조 분해
+//(... array spread operator) 
 console.log("[ex10]");
 
 const rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
@@ -138,12 +139,10 @@ var f = function(...colors) {
 
 console.log(f('red', 'orange', 'yellow'));
 
-// ex11 - 배열의 구조 분해(... array spread operator 함수의 파라미터로 사용하기) 
+// ex11 - 배열의 구조 분해
+//(... array spread operator 함수의 파라미터로 사용하기(argument 대용)) 
 console.log("[ex11]");
 
 const s = ((...colors) => colors.join(' '))('red', 'orange', 'yellow');
 
 console.log(s);
-
-
-
