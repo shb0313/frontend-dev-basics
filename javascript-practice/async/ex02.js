@@ -16,22 +16,28 @@ const myAsyncFn02 = function(param) {
     });
 }
 
-// test01: success
-// myAsyncFn02("data").then(function(result) {
-//     console.log("s: " + result);
-// });
+if(require.main == module) {
+    myAsyncFn02("data")
+        .then(function(result) {
+            console.log("s: " + result);
+        })
+        .catch(function(error) {
+            console.error("f: " + error);
+        });
+    
+    // test01: success
+    // myAsyncFn02("data").then(function(result) {
+    //     console.log("s: " + result);
+    // });
+    
+    // test02: fail
+    // myAsyncFn02("").catch(function(error) {
+    //     console.error("f: " + error);
+    // });
+    
+    console.log("wait...");
 
-// test02: fail
-// myAsyncFn02("").catch(function(error) {
-//     console.error("f: " + error);
-// });
+} else {
+    module.exports = myAsyncFn02;
+}
 
-myAsyncFn02("data")
-    .then(function(result) {
-        console.log("s: " + result);
-    })
-    .catch(function(error) {
-        console.error("f: " + error);
-    });
-
-console.log("wait...");
